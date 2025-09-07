@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dreamjobs Portal</title>
+  </head>
+  <body>
+    <h1 style="text-align: center; color: rgb(144, 127, 255)">
+      DreamJobs Portal
+    </h1>
+    <nav style="text-align: center; color: rgb(16, 16, 246)">
+      <a href="#home">Home</a> | <a href="#jobs">Available Jobs</a> |
+      <a href="#apply">Apply</a> | <a href="#about">About</a> |
+      <a href="#contact">Contact</a>
+    </nav>
+    <hr />
+    <section id="home">
+      <h2 style="text-align: center; color: rgb(144, 127, 255)">
+        Welcome to DreamJobs
+      </h2>
+      <p style="text-align: center">
+        Looking for your dream career? You're in the right place. Explore
+        opportunities, apply easily, and start your journey with us.
+      </p>
+      <img
+        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        style="width: 100vw; height: 300px"
+        alt="image"
+      />
+      <a href="#jobs">Check available jobs → </a>
+    </section>
+    <hr>
+    
+    <section id="jobs">
+      <h2>Available Jobs</h2>
+      <table border="1" cellpadding="10" cellspacing="0">
+        <tr>
+          <th>Job Title</th>
+          <th>Department</th>
+          <th>Location</th>
+          <th>Apply</th>
+        </tr>
+        <tr>
+          <td>Frontend Developer</td>
+          <td>Engineering</td>
+          <td>Bangalore</td>
+          <td><a href="#apply">Apply Now</a></td>
+        </tr>
+        <tr>
+          <td>Backend Developer</td>
+          <td>Engineering</td>
+          <td>Hyderabad</td>
+          <td><a href="#apply">Apply Now</a></td>
+        </tr>
+        <tr>
+          <td>QA Engineer</td>
+          <td>Testing</td>
+          <td>Pune</td>
+          <td><a href="#apply">Apply Now</a></td>
+        </tr>
+        <tr>
+          <td>UI/UX Designer</td>
+          <td>Design</td>
+          <td>Remote</td>
+          <td><a href="#apply">Apply Now</a></td>
+        </tr>
+      </table>
+      <hr />
+    </section>
+
+    <section id="apply">
+      <h2>Job Application Form</h2>
+      <p>Please fill in your details carefully.</p>
+      <form>
+        <h3>Personal Information</h3>
+        <label for="fname">First Name:</label>
+        <input
+          type="text"
+          id="fname"
+          name="fname"
+          placeholder="e.g., John"
+        /><br /><br />
+
+        <label for="lname">Last Name:</label>
+        <input
+          type="text"
+          id="lname"
+          name="lname"
+          placeholder="e.g., Doe"
+        /><br /><br />
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" /><br /><br />
+
+        <p>Gender:</p>
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other" />
+        <label for="other">Other</label><br /><br />
+
+        <label for="photo">Upload Photo:</label>
+        <input type="file" id="photo" name="photo" /><br /><br />
+
+        <hr />
+
+        <h3>Contact Information</h3>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" /><br /><br />
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" /><br /><br />
+
+        <label for="address">Address:</label><br />
+        <textarea id="address" name="address" rows="4" cols="40"></textarea
+        ><br /><br />
+
+        <hr />
+
+        <h3>Job Preferences</h3>
+        <label for="role">Desired Role:</label>
+        <select id="role" name="role">
+          <option value="frontend">Frontend Developer</option>
+          <option value="backend">Backend Developer</option>
+          <option value="qa">QA Engineer</option>
+          <option value="designer">UI/UX Designer</option></select
+        ><br /><br />
+
+        <p>Skills:</p>
+        <input type="checkbox" id="html" name="skills" value="HTML" />
+        <label for="html">HTML</label>
+        <input type="checkbox" id="css" name="skills" value="CSS" />
+        <label for="css">CSS</label>
+        <input type="checkbox" id="js" name="skills" value="JavaScript" />
+        <label for="js">JavaScript</label>
+        <input type="checkbox" id="react" name="skills" value="React" />
+        <label for="react">React</label>
+        <input type="checkbox" id="node" name="skills" value="Node.js" />
+        <label for="node">Node.js</label><br /><br />
+
+        <p>Job Type:</p>
+        <input type="radio" id="fulltime" name="jobtype" value="Full-time" />
+        <label for="fulltime">Full-time</label>
+        <input type="radio" id="parttime" name="jobtype" value="Part-time" />
+        <label for="parttime">Part-time</label>
+        <input type="radio" id="internship" name="jobtype" value="Internship" />
+        <label for="internship">Internship</label><br /><br />
+
+        <hr />
+
+        <h3>Academics & Resume</h3>
+        <label for="education">Educational Background:</label><br />
+        <textarea id="education" name="education" rows="4" cols="40"></textarea
+        ><br /><br />
+
+        <label for="resume">Upload Resume:</label>
+        <input type="file" id="resume" name="resume" /><br /><br />
+
+        <hr />
+
+        <h3>Account Security</h3>
+        <label for="password">Create Password:</label>
+        <input type="password" id="password" name="password" /><br /><br />
+
+        <label for="security-question">Security Question:</label>
+        <select id="security-question" name="security-question">
+          <option value="">Select a question</option>
+          <option value="pet">What is your pet’s name?</option>
+          <option value="school">What was your first school?</option>
+          <option value="city">In which city were you born?</option></select
+        ><br /><br />
+
+        <label for="answer">Answer:</label>
+        <input type="text" id="answer" name="answer" /><br /><br />
+
+        <input type="checkbox" id="tnc" name="tnc" />
+        <label for="tnc">I agree to the Terms and Conditions</label><br /><br />
+
+        <button type="submit">Submit Application</button>
+        <button type="reset">Clear Form</button>
+      </form>
+      <hr />
+    </section>
+
+    
+    <section id="about">
+      <h2>About DreamJobs</h2>
+      <p>
+        DreamJobs is a platform dedicated to connecting passionate talent with
+        leading companies. We believe in creating opportunities and helping
+        individuals achieve their career dreams.
+      </p>
+      <hr />
+    </section>
+
+   
+    <footer id="contact" style="text-align: center">
+      <p>Contact us: <a href="mailto:hr@dreamjobs.com">hr@dreamjobs.com</a></p>
+      <p>
+        <a href="https://github.com/" target="_blank">GitHub</a> |
+        <a href="https://linkedin.com/" target="_blank">LinkedIn</a> |
+        <a href="https://twitter.com/" target="_blank">Twitter</a>
+      </p>
+      <p>© 2025 DreamJobs Portal | All Rights Reserved</p>
+    </footer>
+  </body>
+</html>
+
+  </body>
+</html>
