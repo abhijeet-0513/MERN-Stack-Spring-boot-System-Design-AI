@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Media</title>
+  </head>
+  <body>
+    <h1>HTML Media Tag</h1>
+    <!-- <audio src="./wavy.mp3" controls></audio>
+    <video src="./rohit.mp4" controls height="300px" width="200px"></video> -->
+
+    <!-- this method is preferred because we can provide multiple sources of same file with different format like mp3, mp4, avi etc if browser does not supports a particular format it will use the video which it supports -->
+
+    <audio controls>
+      <source src="./wavy.mp3" type="audio/mp3" />
+    </audio>
+    <video width="320" height="240" controls>
+      <source src="movie.mp4" type="video/mp4" />
+      <source src="movie.ogg" type="video/ogg" />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- embedding Youtube video -->
+    <iframe
+      src="https://www.youtube.com/embed/NGYp1zCBthk"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+    <iframe
+      src="https://youtube.com/embed/tsde9KxQKas?si=vJ4kQDca2oFKxuKo"
+      allowfullscreen
+    ></iframe>
+  </body>
+</html>
