@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | FitLife Gym</title>
+  </head>
+  <body>
+    <header>
+      <h1 style="color: aqua; background-color: #000; text-align: center">
+        FitLife Gym
+      </h1>
+      <ul style="text-align: center; list-style: none; padding: 0">
+        <li style="display: inline; margin: 0 15px">
+          <a href="index.html">Home</a>
+        </li>
+        <li style="display: inline; margin: 0 15px">
+          <a href="diet.html">Diet Plans</a>
+        </li>
+        <li style="display: inline; margin: 0 15px">
+          <a href="workout.html">Workout Plans</a>
+        </li>
+        <li style="display: inline; margin: 0 15px">
+          <a href="contact.html">Contact</a>
+        </li>
+        <li style="display: inline; margin: 0 15px">
+          <a href="about.html">About Us</a>
+        </li>
+      </ul>
+    </header>
+
+    <hr />
+
+    <main>
+      <h2 style="color: aquamarine; background-color: #000; text-align: center">
+        Get in Touch with Us
+      </h2>
+
+      <section style="width: 60%; margin: auto">
+        <p style="text-align: center">
+          Have questions about our gym, diet, or workout plans? Fill out the
+          form below, and we’ll get back to you soon!
+        </p>
+
+        <form>
+          <!-- Name -->
+          <label for="name">Full Name:</label><br />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          /><br /><br />
+
+          <label for="phone">Contact Number:</label><br />
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="9876543210"
+            required
+          /><br /><br />
+
+          <label for="email">Email Address:</label><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@email.com"
+            required
+          /><br /><br />
+
+          <h3>Fitness Goal</h3>
+          <input type="radio" id="weightloss" name="goal" value="Weight Loss" />
+          <label for="weightloss">Weight Loss</label><br />
+
+          <input type="radio" id="muscle" name="goal" value="Muscle Gain" />
+          <label for="muscle">Muscle Gain</label><br />
+
+          <input
+            type="radio"
+            id="fitness"
+            name="goal"
+            value="General Fitness"
+          />
+          <label for="fitness">General Fitness</label><br /><br />
+
+          <h3>Gender</h3>
+          <input type="radio" id="male" name="gender" value="Male" />
+          <label for="male">Male</label><br />
+
+          <input type="radio" id="female" name="gender" value="Female" />
+          <label for="female">Female</label><br />
+
+          <input type="radio" id="other" name="gender" value="Other" />
+          <label for="other">Other</label><br /><br />
+
+          <h3>How did you hear about us?</h3>
+          <input
+            type="checkbox"
+            id="social"
+            name="referral"
+            value="Social Media"
+          />
+          <label for="social">Social Media</label><br />
+
+          <input
+            type="checkbox"
+            id="friend"
+            name="referral"
+            value="Friends/Family"
+          />
+          <label for="friend">Friends/Family</label><br />
+
+          <input type="checkbox" id="ads" name="referral" value="Online Ads" />
+          <label for="ads">Online Ads</label><br />
+
+          <input type="checkbox" id="walkin" name="referral" value="Walk-in" />
+          <label for="walkin">Walk-in</label><br /><br />
+
+          <label for="message">Your Message:</label><br />
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            cols="40"
+            placeholder="Write here..."
+          ></textarea
+          ><br /><br />
+
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </form>
+      </section>
+    </main>
+
+    <hr />
+
+    <footer style="text-align: center">
+      <p>Copyright &copy; 2025 FitLife Gym | All rights reserved</p>
+    </footer>
+  </body>
+</html>
