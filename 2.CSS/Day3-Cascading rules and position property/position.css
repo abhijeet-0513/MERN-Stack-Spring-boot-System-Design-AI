@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  background-color: cyan;
+  position: relative;
+  left: 20px;
+}
+body {
+  height: 200vh;
+}
+h3 {
+  background-color: aquamarine;
+  position: fixed;
+  bottom: 0;
+}
+
+h4 {
+  background-color: yellow;
+  position: sticky;
+  top: 10px;
+}
+
+p {
+  background-color: teal;
+  position: absolute;
+  left: 50px;
+  top: 30px;
+}
