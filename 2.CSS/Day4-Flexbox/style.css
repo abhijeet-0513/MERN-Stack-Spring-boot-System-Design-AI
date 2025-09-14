@@ -1,0 +1,42 @@
+.container {
+  background-color: antiquewhite;
+  height: 800px;
+  display: flex;
+  /* flex-direction: column;
+    flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  /* flex-wrap: wrap; */
+}
+
+/* main axis and cross axis changes according ton the flex direction */
+/* justify-content works around main axis, align-items works around cross axis */
+/* flex-grow, flex-shrink, flex basis, gap */
+/* default value of flex-grow is 0 and flex-shrink is 1 */
+/* flex basis it override the height if flex direction is column by increasing height and overrides width if direction is row , basically works across main  axis*/
+/* flex short hand */
+/* align-self */
+
+.box {
+  height: 100px;
+  width: 100px;
+  margin: 5px;
+}
+
+.box1 {
+  background-color: red;
+  /* flex-grow: 1; */
+  /* flex-shrink: 4; */
+  /* flex-basis: 200px; */
+}
+.box2 {
+  background-color: green;
+  /* flex-grow: 2; */
+}
+.box3 {
+  background-color: blue;
+  align-self: flex-start;
+}
+.box4 {
+  background-color: yellow;
+}
