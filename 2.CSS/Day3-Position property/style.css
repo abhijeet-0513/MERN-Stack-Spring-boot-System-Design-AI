@@ -1,0 +1,16 @@
+#b {
+  background-color: yellow;
+}
+.a {
+  background-color: green;
+}
+
+h1 {
+  background-color: cyan;
+}
+
+/* in case of tie like specificity is same in that case ordering matters */
+
+h2 {
+  background-color: blueviolet !important;
+}

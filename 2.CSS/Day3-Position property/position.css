@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  background-color: aliceblue;
+}
+h2 {
+  background-color: aquamarine;
+  position: relative;
+  left: 20px;
+  top: 20px;
+  /* top left bottom right */
+}
+
+h3 {
+  background-color: pink;
+  position: fixed; /* adjust itself to window */
+  left: 0px;
+  top: 0px;
+}
