@@ -1,0 +1,41 @@
+.container {
+  height: 200px;
+  width: 200px;
+  background-color: aquamarine;
+  /* box-shadow: 10px 10px rgb(85, 91, 91);  */
+  /* offset of x offset of y */
+  /* box-shadow: 10px 10px 10px mediumblue; */
+  /* offset of x offset of y blur radius */
+  /* box-shadow: 0px 0px 10px 10px mediumblue;  */
+  /* offset of x offset of y blur radius  spread radius*/
+  /* it spread across axes depends on value of x and y offset */
+
+  box-shadow: inset 10px 10px red;
+  /* inner shadow */
+}
+body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.container2 {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: yellow;
+  box-shadow: 0px 0px 10px 10px red;
+}
+
+.cont {
+  height: 400px;
+  width: 500px;
+  color: rgb(29, 29, 28);
+  display: block;
+  overflow: scroll;
+  background-color: wheat;
+  
+}
