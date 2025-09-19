@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day2 - Nested list and Table</title>
+</head>
+
+<body>
+  <header>
+    <center>
+      <h1>HTML Mastery: 6-Day Learning Journey</h1>
+    </center>
+    <center>
+      <nav>
+        <a href="index.html">Home</a> | <a href="day1.html">Day 1</a> |
+        <a href="day2.html">Day 2</a> | <a href="day3.html">Day 3</a> |
+        <a href="day4.html">Day 4</a> | <a href="day5.html">Day 5</a>
+      </nav>
+    </center>
+    <hr />
+    <section>
+      <center>
+        <p>
+          Topics:
+
+          <a href="#nested">Nested List</a> | <a href="#table">Table</a>
+        </p>
+      </center>
+    </section>
+  </header>
+  <main>
+    <section id="nested">
+      <h2>Nested Lists</h2>
+      <ul>
+        <li>
+          A <b>nested list</b> means placing one list
+          <b>inside another list item</b> (&lt;li&gt;).
+        </li>
+
+        <li>You can mix ordered, unordered, and even description lists.</li>
+      </ul>
+      <p><b>Example:</b></p>
+      <ul>
+        <li>
+          Frontend
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </li>
+        <li>
+          Backend
+          <ol type="A">
+            <li>Node.js</li>
+            <li>Java</li>
+            <li>Python</li>
+          </ol>
+        </li>
+      </ul>
+      <p><b>code</b></p>
+      <img src="./images/day2/nested.png" alt="nested list" />
+    </section>
+    <hr />
+    <section id="table">
+      <h2>Table in HTML</h2>
+      <p>
+        Tables are used to <strong>organize data in rows and columns</strong>.
+      </p>
+
+      <h2>Basic Table Tags</h2>
+      <ul>
+        <li>&lt;table&gt; → Defines a table.</li>
+        <li>&lt;tr&gt; → Defines a table row.</li>
+        <li>&lt;td&gt; → Defines a table data cell.</li>
+        <li>
+          &lt;th&gt; → Defines a table header cell (bold +
+          centered by default).
+        </li>
+        <li>
+          &lt;caption&gt; → Title of the table (appears on top).
+        </li>
+      </ul>
+
+      <h2>Table Attributes</h2>
+
+      <ul>
+        <li>border → Adds border around table cells.</li>
+        <li>
+          cellpadding → Space <strong>inside</strong> each cell.
+        </li>
+        <li>
+          cellspacing → Space <strong>between</strong> cells.
+        </li>
+        <li>
+          colspan → Makes a cell span across multiple columns.
+        </li>
+        <li>
+          rowspan → Makes a cell span across multiple rows.
+        </li>
+        <li>
+          align → Aligns table or cell content (left, right,
+          center).
+        </li>
+      </ul>
+
+      <p><b>Example Table</b></p>
+      <table border="1" cellpadding="10" cellspacing="0">
+        <caption>
+          Student Marks
+        </caption>
+        <tr>
+          <th>Roll No</th>
+          <th>Name</th>
+          <th>Marks</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>John</td>
+          <td>85</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Alice</td>
+          <td>92</td>
+        </tr>
+      </table>
+      <p><b>code</b></p>
+      <img src="./images/day2/table1.png" alt="table" />
+
+      <p><b>Example: Using rowspan and colspan</b></p>
+      <table border="1" cellpadding="10" cellspacing="0">
+        <caption>
+          Timetable
+        </caption>
+        <tr>
+          <th>Day</th>
+          <th colspan="2">Subjects</th>
+        </tr>
+        <tr>
+          <td rowspan="2">Monday</td>
+          <td>Math</td>
+          <td>English</td>
+        </tr>
+        <tr>
+          <td>Science</td>
+          <td>History</td>
+        </tr>
+      </table>
+      <p><b>code</b></p>
+      <img src="./images/day2/table2.png" alt="table" />
+    </section>
+  </main>
+  <hr>
+  <footer>
+    <center>
+      <p>&copy; 2025 HTML Notes. All rights reserved.</p>
+    </center>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Working of Internet</title>
+</head>
+
+<body>
+  <header>
+    <center>
+      <h1>HTML Mastery: 6-Day Learning Journey</h1>
+    </center>
+    <center>
+      <nav>
+        <a href="index.html">Home</a> | <a href="day1.html">Day 1</a> |
+        <a href="day2.html">Day 2</a> | <a href="day3.html">Day 3</a> |
+        <a href="day4.html">Day 4</a> | <a href="day5.html">Day 5</a>
+      </nav>
+    </center>
+    <hr />
+    <section>
+      <center>
+        <p>
+          Topics:
+
+          <a href="#internetIP">Internet and IP</a> |
+          <a href="#macAddress">Mac Address</a> |
+          <a href="#https">http protocol</a> |
+          <a href="#IPtypes">Types of IP</a> |
+          <a href="#switch">switch and router</a> |
+          <a href="#public">Public Private IP</a> |
+          <a href="#client">Client server</a>
+        </p>
+      </center>
+    </section>
+  </header>
+
+  <main>
+    <section id="internetIP">
+      <h2>Internet and IP Address</h2>
+      <img src="https://cdn.pixabay.com/photo/2016/06/09/20/38/woman-1446557_1280.jpg" height="400px" width="750px"
+        alt="internet" />
+      <img src="https://cdn.pixabay.com/photo/2023/06/06/16/10/computer-8045029_1280.jpg" height="400px" width="750px"
+        alt="IP address" />
+      <p>
+        Internet: The internet is a worldwide system of connected networks
+        that lets devices communicate and share information using IP addresses
+        and standard protocols.
+      </p>
+      <h3>What is an IP Address?</h3>
+      <ul type="square">
+        <li>
+          IP (Internet Protocol) address is a unique number given to every
+          device connected to the internet.
+        </li>
+        <li>
+          It acts like a digital address so data knows where to be delivered.
+        </li>
+      </ul>
+
+      <h3 type="circle">How IP Address is Allotted?</h3>
+      <ul>
+        <li>
+          When you connect to the internet, your
+          <strong> ISP (Internet Service Provider)</strong>
+          assigns an IP address to your device.
+        </li>
+        <li>
+          When you disconnect, the same IP address can be released and
+          assigned to someone else.
+        </li>
+        <li>- This is called a <strong>Dynamic IP</strong>.</li>
+      </ul>
+
+      <h3>Static vs Dynamic IP:</h3>
+      <ul>
+        <li>
+          Dynamic IP → Changes every time you connect. Most common, provided
+          automatically by ISP.
+        </li>
+        <li>
+          Static IP → Fixed address that doesn’t change, usually used by
+          servers, websites, and companies.
+        </li>
+      </ul>
+
+      <h3>Why Do We Need DNS?</h3>
+      <img
+        src="https://media.licdn.com/dms/image/v2/D4D12AQF9pJ6a3GRtwg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1678451124868?e=2147483647&v=beta&t=cZgErEHgCpLpZRIaxYmMXhq_A-qWr66ydjpm5dJJ-EA"
+        height="300px" width="850px" alt="dns" />
+      <ul>
+        <li>
+          Computers communicate using IP addresses (like 142.250.182.14).
+        </li>
+        <li>But remembering these numbers is hard for humans.</li>
+        <li>
+          DNS (Domain Name System) works like a phonebook — it maps
+          easy-to-remember domain names (like google.com) to IP addresses.
+        </li>
+      </ul>
+
+      <h3>Flow of Accessing a Website:</h3>
+      <ul>
+        <li>You type a website name in your browser (e.g., youtube.com).</li>
+        <li>
+          Browser asks the <strong> DNS server</strong> for the IP address of
+          that domain.
+        </li>
+        <li>DNS server responds with the correct IP address.</li>
+        <li>
+          Your device then uses that IP to connect to the web server and load
+          the website.
+        </li>
+      </ul>
+    </section>
+    <hr />
+
+    <section id="macAddress">
+      <h2>MAC Address and Port number</h2>
+
+      <ul>
+        <li>
+          A <strong> MAC address</strong> is like the
+          <strong> serial number</strong> of your device’s network card.
+        </li>
+        <li>
+          It is <strong> unique</strong> for every device (like your
+          fingerprint).
+        </li>
+        <li>It never changes because it is built into the hardware.</li>
+      </ul>
+      <h2>Why it is Needed?</h2>
+      <ul>
+        <li>
+          To <strong>identify devices</strong> in a local network (like Wi-Fi
+          or LAN).
+        </li>
+        <li>
+          To make sure data goes to the <strong>right device</strong> inside
+          the network.
+        </li>
+        <li>
+          Used for <strong>network security</strong> (like blocking/allowing
+          devices).
+        </li>
+      </ul>
+
+      <p>
+        <strong>MAC address</strong> = Your device’s permanent home address
+        inside the local network. <br />
+        <strong>IP address</strong> = The temporary address given when you
+        connect to the internet.
+      </p>
+
+      <h3>Ways to Send or Receive Data</h3>
+      <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*z_I0A7Yrk8J6kxTnwdkkvA.jpeg" height="300px"
+        width="700px" alt="multicast" />
+      <ol>
+        <li>
+          <strong>Unicast</strong>
+          <ul>
+            <li>
+              Data is sent from
+              <strong>one device to exactly one device</strong>.
+            </li>
+            <li>
+              Example: Your laptop sending a file directly to your friend’s
+              laptop.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Broadcast</strong>
+          <ul>
+            <li>
+              Data is sent from <strong>one device to all devices</strong> in
+              the local network.
+            </li>
+            <li>
+              Example: When a device first joins a network, it sends a
+              broadcast asking “Who is the DHCP server?”
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Multicast</strong>
+          <ul>
+            <li>
+              Data is sent from
+              <strong>one device to a selected group of devices</strong>.
+            </li>
+            <li>
+              Example: Online video streaming where the same video is
+              delivered to many viewers at once without sending separate
+              copies.
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+    <hr />
+    <section id="https">
+      <h2>HTTP vs HTTPS</h2>
+      <img src="https://images.shiksha.com/mediadata/ugcDocuments/images/wordpressImages/2023_09_HTTPS.jpg"
+        height="300px" width="700px" alt="http" />
+      <ul>
+        <li>
+          <b>HTTP (HyperText Transfer Protocol):</b>
+          <ul>
+            <li>
+              Transfers data between browser & website in <b>plain text</b>.
+            </li>
+            <li>Data can be intercepted by others.</li>
+          </ul>
+        </li>
+        <li>
+          <b>HTTPS (HyperText Transfer Protocol Secure):</b>
+          <ul>
+            <li>Secure version of HTTP using <b>SSL/TLS encryption</b>.</li>
+            <li>
+              Keeps sensitive data (passwords, payments) safe from hackers.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Example:</h3>
+      <ol>
+        <li>Login with <b>HTTP</b> → Username & password can be stolen.</li>
+        <li>Login with <b>HTTPS</b> → Data is encrypted & secure.</li>
+      </ol>
+    </section>
+    <hr />
+
+    <section id="IPtypes">
+      <h2>IPv4 vs IPv6</h2>
+      <img
+        src="https://www.avg.com/hs-fs/hubfs/Blog_Content/Avg/Signal/AVG%20Signal%20Images/IPv4%20vs.%20IPv6%20addresses%20(Signal)/IPv4-vs-IPv6-EN.png?width=1320&name=IPv4-vs-IPv6-EN.png"
+        height="300px" width="700px" alt="IPV$ and IPV6" />
+      <img src="https://www.a10networks.com/wp-content/uploads/No-compatibility-between-IPv4-IPv6-networks.png"
+        height="300px" width="700px" alt="IPV$ and IPV6" />
+      <ul>
+        <li>
+          <b>IPv4:</b>
+          <ul>
+            <li>32-bit, written as dotted decimal (e.g., 192.168.1.1).</li>
+            <li>~4.3 billion addresses.</li>
+          </ul>
+        </li>
+        <li>
+          <b>IPv6:</b>
+          <ul>
+            <li>128-bit, written in hexadecimal (e.g., 2001:db8::7334).</li>
+            <li>Huge address space (340 undecillion).</li>
+            <li>Faster routing, built-in security (IPSec).</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Why IPv6?</h3>
+      <ul>
+        <li>IPv4 addresses were running out due to internet growth & IoT.</li>
+        <li>IPv6 solves shortage and adds better features.</li>
+      </ul>
+    </section>
+    <hr />
+
+    <section id="switch">
+      <h2>Switch vs Router</h2>
+      <img
+        src="https://d2cest1yk6hx2d.cloudfront.net/uninets-001/store/1619/blog/difference-between-router-and-switch.jpg"
+        height="300px" width="700px" alt="" />
+      <h3>Switch</h3>
+      <ul>
+        <li>Connects multiple devices inside a <b>LAN</b>.</li>
+        <li>Uses <b>MAC addresses</b> to forward data.</li>
+        <li>Works at <b>Data Link Layer (Layer 2)</b>.</li>
+      </ul>
+      <h3>Router</h3>
+      <ul>
+        <li>Connects <b>different networks</b> (e.g., home to internet).</li>
+        <li>Uses <b>IP addresses</b> to send data.</li>
+        <li>Works at <b>Network Layer (Layer 3)</b>.</li>
+      </ul>
+      <h3>In short:</h3>
+      <ul>
+        <li><b>Switch:</b> Connects devices in same network (MAC).</li>
+        <li><b>Router:</b> Connects networks & internet (IP).</li>
+      </ul>
+    </section>
+    <hr />
+    <section id="public">
+      <!-- Public vs Private IP -->
+      <h2>Public vs Private IP</h2>
+      <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/0*_oHzXT3JYrkKScFE.png" height="300px"
+        width="700px" alt="" />
+      <h3>Public IP</h3>
+      <ul>
+        <li>Given by <b>ISP</b>, unique worldwide.</li>
+        <li>Used for communication on internet.</li>
+      </ul>
+      <h3>Private IP</h3>
+      <ul>
+        <li>Used inside a <b>local network</b>.</li>
+        <li>
+          Not unique globally, cannot be accessed directly from internet.
+        </li>
+      </ul>
+      <h3>Why Both?</h3>
+      <ul>
+        <li><b>Private IP</b> → Local communication inside LAN.</li>
+        <li><b>Public IP</b> → Connects to outside internet.</li>
+        <li><b>NAT</b> translates between them.</li>
+      </ul>
+      <h3>Example:</h3>
+      <ul>
+        <li>Laptop → Private IP <b>192.168.1.5</b>.</li>
+        <li>Router → Public IP <b>122.178.44.11</b>.</li>
+      </ul>
+    </section>
+    <hr />
+
+
+    <section id="client">
+      <h2>Web Development & Client–Server Model</h2>
+      <h3>Client–Server Model</h3>
+      <img src="https://images.wondershare.com/edrawmax/templates/network-diagram-for-client-server.png" height="300px"
+        width="700px" alt="client-server model">
+      <ul>
+        <li><b>Client:</b> Browser/device sending request.</li>
+        <li><b>Server:</b> Stores data/websites & responds.</li>
+        <li>
+          <b>Example:</b> Google.com → Browser requests → Server responds.
+        </li>
+      </ul>
+      <h3>Frontend (Client-side)</h3>
+      <ul>
+        <li><b>HTML:</b> Structures content.</li>
+        <li><b>CSS:</b> Styles content.</li>
+        <li><b>JavaScript:</b> Adds interactivity.</li>
+      </ul>
+      <h3>Backend (Server-side)</h3>
+      <ul>
+        <li>Handles data, logic, databases.</li>
+        <li>Examples: Node.js, Python, Java, PHP.</li>
+      </ul>
+      <h3>Flow:</h3>
+      <ol>
+        <li>User → Browser (Client).</li>
+        <li>Request sent to Server.</li>
+        <li>Server processes & responds with HTML, CSS, JS.</li>
+        <li>Browser displays page.</li>
+      </ol>
+    </section>
+  </main>
+  <hr />
+  <footer>
+    <center>
+      <p>&copy; 2025 HTML Notes. All rights reserved.</p>
+    </center>
+  </footer>
+</body>
+
+</html>

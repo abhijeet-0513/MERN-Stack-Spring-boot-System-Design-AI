@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day3 - HTML Boilerplate and File path</title>
+</head>
+
+<body>
+  <header>
+    <center>
+      <h1>HTML Mastery: 6-Day Learning Journey</h1>
+    </center>
+    <center>
+      <nav>
+        <a href="index.html">Home</a> | <a href="day1.html">Day 1</a> |
+        <a href="day2.html">Day 2</a> | <a href="day3.html">Day 3</a> |
+        <a href="day4.html">Day 4</a> | <a href="day5.html">Day 5</a>
+      </nav>
+    </center>
+    <hr />
+    <section>
+      <center>
+        <p>
+          Topics:
+
+          <a href="#boiler">Boilerplate</a> | <a href="#path">File path</a> |
+          <a href="#class">Class and Id</a>
+        </p>
+      </center>
+    </section>
+  </header>
+
+  <main>
+    <section id="boiler">
+      <h2>HTML Boilerplate Code</h2>
+      <p>
+        The HTML Boilerplate is the standard starting template of every HTML
+        document.
+      </p>
+      <p><b>code</b></p>
+      <img src="./images/day3/boiler.png" alt="boilerplate code" />
+      <h3>HTML Document Structure</h3>
+
+      <ul>
+        <li>
+          &lt;!DOCTYPE html&gt; → Declares the document type as
+          <b>HTML5</b>.
+        </li>
+        <li>
+          &lt;html lang="en"&gt; → Root element of the HTML page;
+          lang="en" tells the browser and screen readers the
+          language is English.
+        </li>
+        <li>
+          &lt;head&gt; → Contains <b>metadata</b> (information
+          about the document, not displayed on the page).
+          <ul>
+            <li>
+              &lt;meta charset="UTF-8"&gt; → Sets character
+              encoding to <b>UTF-8</b> (supports all characters, emojis,
+              symbols).
+            </li>
+            <li>
+              &lt;meta name="viewport" content="width=device-width,
+              initial-scale=1.0"&gt;
+              → Makes the page <b>responsive</b> (adapts to screen sizes).
+            </li>
+            <li>
+              &lt;title&gt; → Title of the webpage (appears in
+              browser tab).
+            </li>
+          </ul>
+        </li>
+        <li>
+          &lt;body&gt; → Main content of the webpage (headings,
+          paragraphs, images, etc.).
+        </li>
+      </ul>
+    </section>
+    <hr>
+    <section id="path">
+      <h2>File path</h2>
+      <p>
+        File paths tell the browser where to find a file (image, CSS, JS,
+        etc.).
+      </p>
+      <h3>Types of File Paths</h3>
+      <ul>
+        <li>
+          <b>Relative Path</b> → Path relative to the location of the HTML file.
+        </li><br>
+        <img src="./images/day3/path1.png" alt="relative path">
+        <ol>
+          <li>
+            Looks inside the images folder present in the same directory.
+          <li>
+            Best practice for web development because it works after
+            deployment.
+          </li>
+        </ol>
+        </li>
+        <br>
+        <li><b>Absolute Path (System Path)</b> → Full path in your computer.</li><br>
+        <img src="./images/day3/path2.png" alt="absolute path"><br>
+        <ol>
+          <li>Works only on your system.</li>
+          <li>If you send this file to someone else, it won’t work because their computer doesn’t have the same path.
+          </li>
+        </ol>
+        <br>
+        <li>
+          <b>Absolute URL (Web Path)</b> → Full URL of the resource on the internet.
+        </li><br>
+        <img src="./images/day3/path3.png" alt="path ">
+        <ol>
+          <li>Best for linking external resources (like CDN images, fonts, scripts).</li>
+        </ol>
+      </ul>
+
+      <h3>Why Browsers Block System Absolute Paths?</h3>
+
+      <ul>
+        <li>
+          Browsers restrict access to <b>local system paths</b>
+          (like C:/ or /Users/) for
+          <b>security reasons</b>.
+        </li>
+        <li>
+          If allowed, websites could <b>steal personal files</b>
+          from your computer.
+        </li>
+        <li>
+          That’s why only <b>relative paths</b>
+          (inside your project folder) and <b>web URLs</b> are safe.
+        </li>
+      </ul>
+    </section>
+    <hr>
+    <section id="class">
+      <h2>Class, div and Id</h2>
+      <h3>&lt;div&gt; in HTML</h3>
+      <ul>
+        <li>&lt;div&gt; = <b>division</b>.</li>
+        <li>A container element used to group HTML elements together.</li>
+        <li>Has <b>no semantic meaning</b> (just a box).</li>
+        <li>Useful for applying <b>CSS styling</b> or <b>JavaScript logic</b> to grouped content.</li>
+      </ul>
+      <p><b>code</b></p>
+      <img src="./images/day3/div.png" alt="div">
+      <h3>Class Attribute</h3>
+      <ul>
+        <li>class is used to <b>group multiple elements</b> under the same style/behavior.</li>
+        <li>One element can have <b>multiple classes</b>.</li>
+        <li>Multiple elements can share the same class.</li>
+      </ul>
+      <p><b>code</b></p>
+      <img src="./images/day3/class.png" alt="class">
+
+      <h3>ID Attribute</h3>
+      <ul>
+        <li>id is used to <b>uniquely identify</b> an element.</li>
+        <li>Each id must be <b>unique</b> in a page (cannot repeat).</li>
+        <li>Mostly used for <b>JavaScript</b> or <b>CSS targeting</b>.</li>
+      </ul>
+      <p><b>code</b></p>
+      <img src="./images/day3/id.png" alt="id">
+
+      <p><b>Combining Div, Class & ID</b></p>
+      <img src="./images/day3/combo.png" alt="">
+    </section>
+  </main>
+  <hr>
+  <footer>
+    <center>
+      <p>&copy; 2025 HTML Notes. All rights reserved.</p>
+    </center>
+  </footer>
+</body>
+
+</html>

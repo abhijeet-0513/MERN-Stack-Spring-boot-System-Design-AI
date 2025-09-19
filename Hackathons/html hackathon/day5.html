@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day5 - HTML Media</title>
+</head>
+
+<body>
+  <header>
+    <center>
+      <h1>HTML Mastery: 6-Day Learning Journey</h1>
+    </center>
+    <center>
+      <nav>
+        <a href="index.html">Home</a> | <a href="day1.html">Day 1</a> |
+        <a href="day2.html">Day 2</a> | <a href="day3.html">Day 3</a> |
+        <a href="day4.html">Day 4</a> | <a href="day5.html">Day 5</a>
+      </nav>
+    </center>
+    <hr />
+    <section>
+      <center>
+        <p>
+          Topics:
+
+          <a href="#media">HTML Media</a> | <a href="#audio">Audio Tag</a> |
+          <a href="#video">Video Tag</a> | <a href="#source">Source</a> |
+          <a href="#frame">Iframe</a>
+        </p>
+      </center>
+    </section>
+  </header>
+
+  <main>
+    <section id="media">
+      <h2>HTML Media</h2>
+
+      <h3>Definition:</h3>
+      <p>
+        HTML Media refers to the ability of HTML to embed and play multimedia
+        content like audio, video, and external media (e.g., YouTube, iframes)
+        directly in a webpage without needing extra plugins.
+      </p>
+
+      <h3>Types of Media in HTML</h3>
+      <ul>
+        <li>Audio → &lt;audio&gt; tag (music, sound effects).</li>
+        <li>Video → &lt;video&gt; tag (movies, clips, tutorials).</li>
+        <li>
+          External Media → &lt;iframe&gt; (YouTube, maps, external sites).
+        </li>
+        <li>
+          Supporting Features:
+          <ol>
+            <li>&lt;track&gt; → subtitles/captions.</li>
+            <li>Responsive media with CSS for different screen sizes.</li>
+          </ol>
+        </li>
+      </ul>
+    </section>
+    <section id="audio">
+      <h2>&lt;audio&gt; Tag in HTML</h2>
+
+      <h3>Definition</h3>
+      <p>
+        The &lt;audio&gt; tag is used to play
+        <strong>sound/music</strong> files on a webpage. It requires the
+        controls attribute to display play, pause, and volume UI. It works
+        with &lt;source&gt; to support multiple formats.
+      </p>
+
+      <h3>Important Attributes</h3>
+      <ul>
+        <li>
+          <strong>src</strong> → Path of the audio file (not recommended if
+          using &lt;source&gt;).
+        </li>
+        <li><strong>controls</strong> → Displays playback controls.</li>
+        <li>
+          <strong>autoplay</strong> → Starts playing automatically (not
+          supported in all browsers).
+        </li>
+        <li><strong>loop</strong> → Repeats audio continuously.</li>
+        <li><strong>muted</strong> → Starts audio muted.</li>
+        <li>
+          <strong>preload</strong> → Defines how the browser loads audio:
+          <ul>
+            <li>none → Doesn’t preload.</li>
+            <li>metadata → Loads info (duration, etc.).</li>
+            <li>auto → Loads full audio (default).</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>Example</h3>
+      <audio controls>
+        <source src="./images/day5/wavy.mp3" type="audio/mpeg" />
+        <source src="example.ogg" type="audio/ogg" />
+        Your browser does not support the audio element.
+      </audio>
+      <p><b>code</b></p>
+      <img src="./images/day5/audio.png" alt="" />
+    </section>
+    <hr />
+    <section id="video">
+      <h2>&lt;video&gt; Tag in HTML</h2>
+
+      <h3>Definition</h3>
+      <p>
+        The &lt;video&gt; tag is used to embed
+        <strong>videos</strong> into a webpage. It supports multiple video
+        formats using &lt;source&gt; for better browser compatibility.
+      </p>
+
+      <h3>Important Attributes</h3>
+      <ul>
+        <li><strong>src</strong> → Path of the video file.</li>
+        <li>
+          <strong>controls</strong> → Displays playback options (play, pause,
+          volume, etc.).
+        </li>
+        <li><strong>autoplay</strong> → Starts video automatically.</li>
+        <li><strong>loop</strong> → Repeats the video continuously.</li>
+        <li><strong>muted</strong> → Starts video muted.</li>
+        <li>
+          <strong>poster</strong> → Preview image shown before the video
+          plays.
+        </li>
+        <li>
+          <strong>width</strong> & <strong>height</strong> → Sets the video
+          size.
+        </li>
+        <li>
+          <strong>preload</strong> → Defines how the browser loads the video:
+          <ul>
+            <li>none → Doesn’t preload.</li>
+            <li>metadata → Loads video info (duration, etc.).</li>
+            <li>auto → Loads full video (default).</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>Example</h3>
+      <video width="500" controls poster="thumbnail.jpg">
+        <source src="./images/day5/rohit.mp4" type="video/mp4" />
+        <source src="example.ogg" type="video/ogg" />
+        <source src="example.webm" type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
+      <p><b>code</b></p>
+      <img src="./images/day5/video.png" alt="" />
+    </section>
+    <hr />
+    <section id="source">
+      <h2>&lt;source&gt; Tag</h2>
+      <p>
+        The &lt;source&gt; tag is used inside &lt;audio&gt; or &lt;video&gt;
+        elements to provide <strong>multiple file formats</strong> for better
+        browser compatibility.
+      </p>
+
+      <h3>Attributes</h3>
+      <ul>
+        <li><strong>src</strong> → File path.</li>
+        <li>
+          <strong>type</strong> → MIME type (e.g., audio/mp3, video/mp4,
+          video/ogg).
+        </li>
+      </ul>
+    </section>
+    <hr />
+    <section id="frame">
+      <h2>&lt;iframe&gt; Tag</h2>
+      <p>
+        The &lt;iframe&gt; tag is used to embed
+        <strong>external media or content</strong>, such as YouTube videos,
+        Google Maps, or other websites.
+      </p>
+
+      <h3>Important Attributes</h3>
+      <ul>
+        <li><strong>src</strong> → URL of the embedded content.</li>
+        <li>
+          <strong>width</strong> &amp; <strong>height</strong> → Size of the
+          frame.
+        </li>
+        <li><strong>frameborder</strong> → Border thickness (0 = none).</li>
+        <li>
+          <strong>allowfullscreen</strong> → Enables fullscreen mode (useful
+          for videos).
+        </li>
+        <li>
+          <strong>loading="lazy"</strong> → Loads iframe only when it comes
+          into view (performance boost).
+        </li>
+      </ul>
+
+      <h3>Example (YouTube Video)</h3>
+      <iframe width="498" height="300" src="https://www.youtube.com/embed/MluY-_FUxFI" title="YouTube video"
+        frameborder="0" allowfullscreen loading="lazy">
+      </iframe>
+      <iframe width="498" height="300" src="https://www.youtube.com/embed/KD5mNp8PTko" title="YouTube video"
+        frameborder="0" allowfullscreen loading="lazy">
+      </iframe>
+      <iframe width="498" height="300" src="https://www.youtube.com/embed/dn3q4iLCmrA" title="YouTube video"
+        frameborder="0" allowfullscreen loading="lazy">
+      </iframe>
+      <iframe width="498" height="300" src="https://www.youtube.com/embed/_YVQN6_nkfs?start=1390" title="YouTube video"
+        frameborder="0" allowfullscreen loading="lazy">
+      </iframe>
+      <iframe width="498" height="300" src="https://www.youtube.com/embed/Xv-gTGw4i_Y" title="YouTube video"
+        frameborder="0" allowfullscreen loading="lazy">
+      </iframe>
+      <iframe width="498" height="300" src="https://www.youtube.com/embed/JkN5b646ll0" title="YouTube video"
+        frameborder="0" allowfullscreen loading="lazy">
+      </iframe>
+      <p><b>code</b></p>
+      <img src="./images/day5/iframe.png" alt="" />
+    </section>
+  </main>
+
+  <hr />
+
+  <footer>
+    <center>
+      <p>&copy; 2025 HTML Notes. All rights reserved.</p>
+    </center>
+  </footer>
+</body>
+
+</html>

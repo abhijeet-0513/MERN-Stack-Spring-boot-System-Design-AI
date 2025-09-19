@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day1 - HTML Basics</title>
+</head>
+
+<body>
+  <header>
+    <center>
+      <h1>HTML Mastery: 6-Day Learning Journey</h1>
+    </center>
+    <center>
+      <nav>
+        <a href="index.html">Home</a> | <a href="day1.html">Day 1</a> |
+        <a href="day2.html">Day 2</a> | <a href="day3.html">Day 3</a> |
+        <a href="day4.html">Day 4</a> | <a href="day5.html">Day 5</a>
+      </nav>
+    </center>
+    <hr />
+    <section>
+      <center>
+        <p>
+          Topics:
+
+          <a href="#html">HTML</a> |
+          <a href="#basicTags">Basic Tags</a> |
+          <a href="#list">List</a> |
+          <a href="#anchor">Anchor Tag</a> |
+          <a href="#image">Images</a>
+        </p>
+      </center>
+    </section>
+  </header>
+
+
+  <main>
+    <section id="html">
+      <h2>Introduction to HTML</h2>
+      <ul>
+        <li>
+          <strong>HyperText</strong> → Text that contains links (hyperlinks)
+          to other text or resources. Example: clicking a link that takes you
+          to another page.
+        </li>
+        <li>
+          <strong>Markup</strong> → Special tags (like heading, paragraph, anchor etc..)
+          used to tell the browser how to display content.
+        </li>
+        <li>
+          <strong>Language</strong> → A set of rules and syntax that computers (browsers)
+          can understand.
+        </li>
+        <p>
+          <strong>Hyper Text Markup Language (HTML)</strong> means a
+          <strong>
+            language made of tags that structures web content and allows
+            linking between pages.
+          </strong>
+        </p>
+      </ul>
+    </section>
+
+    <section id="basicTags">
+      <h2>Basic HTML Tags</h2>
+
+      <li>
+        <h3>Headings (&lt;<b>h1</b>&gt; to &lt;<b>h6</b>&gt;)</h3>
+        <ul>
+          <li>Used to define headings on a webpage.</li>
+          <li>
+            <b>h1</b> is the largest (main heading), <b>h6</b> is the
+            smallest.
+          </li>
+          <li>Search engines give more weight to <b>h1</b></li>
+        </ul>
+        <p><b>Code</p></b>
+        <img src="./images/day1/heading.png" alt="heading example" height="75px" width="450px" />
+      </li>
+
+      <li>
+
+
+        <h3>Paragraph (&lt;<b>p</b>&gt;)</h3>
+        <ul>
+          <li>Used to define blocks of text content.</li>
+          <li>
+            Browsers automatically add spacing before and after a paragraph.
+          </li>
+        </ul>
+        <p><b>Code</p></b>
+        <img src="./images/day1/paragraph.png" alt="heading example" height="75px" width="450px" />
+      </li>
+
+      <li>
+        <h3>Line Break (&lt;<b>br</b>&gt;)</h3>
+        <ul>
+          <li>
+            Inserts a <b> single line break</b> without starting a new
+            paragraph.
+          </li>
+        </ul>
+        <p><b>Code</p></b>
+        <img src="./images/day1/break.png" alt="heading example" height="75px" width="450px" />
+      </li>
+      <li>
+        <h3>Horizontal Rule (&lt;<b>hr</b>&gt;)</h3>
+        <ul>
+          <li>Creates a <b> horizontal line</b> across the page.</li>
+          <li>Often used to separate sections of content.</li>
+        </ul>
+        <p><b>Code</p></b>
+        <img src="./images/day1/hr.png" alt="heading example" height="75px" width="450px" />
+      </li>
+    </section>
+    <hr>
+    <section id="list">
+      <h2>Lists in HTML</h2>
+      <h3>Ordered List (&lt;ol&gt;)</h3>
+      <ul>
+        <li>Displays items in a <strong>numbered</strong> sequence.</li>
+        <li>Each item goes inside &lt;li&gt;.</li>
+        <li>Default: numbers (1, 2, 3..).</li>
+      </ul>
+
+      <h3>Attributes of &lt;ol&gt;:</h3>
+      <ol>
+        <li>type → changes numbering style
+          <ul>
+            <li>1 → Numbers (default)</li>
+            <li>A → Uppercase letters</li>
+            <li>a → Lowercase letters</li>
+            <li>I → Roman numerals (uppercase)</li>
+            <li>i → Roman numerals (lowercase)</li>
+          </ul>
+        </li>
+        <li>start → specifies starting number/letter.</li>
+        <li>reversed → displays numbers in descending order.</li>
+      </ol>
+
+      <p>
+        <b>code</b>
+      </p>
+      <img src="./images/day1/ol.png" alt="o">
+
+      <h3>Unordered List (&lt;ul&gt;)</h3>
+      <ul>
+        <li>Displays items with <strong>bullets</strong>.</li>
+        <li>Each item goes inside &lt;li&gt;.</li>
+      </ul>
+
+      <h3>Attributes of &lt;ul&gt;:</h3>
+      <ul>
+        <li>type="disc" → ● (default)</li>
+        <li>type="circle" → ○</li>
+        <li>type="square" → ■</li>
+        <li>type="none" → No bullets</li>
+      </ul>
+      <p>
+        <b>code</b>
+      </p>
+      <img src="./images/day1/ul.png" alt="u">
+
+      <h3>Description List (&lt;dl&gt;)</h3>
+      <ul>
+        <li>Used for <strong>terms and descriptions</strong> (like a glossary or FAQ).</li>
+      </ul>
+
+      <h3>Tags used:</h3>
+      <dl>
+        <dt>&lt;dl&gt;</dt>
+        <dd>Defines the list.</dd>
+
+        <dt>&lt;dt&gt;</dt>
+        <dd>Defines the term.</dd>
+
+        <dt>&lt;dd&gt;</dt>
+        <dd>Defines the description.</dd>
+      </dl>
+      <p>
+        <b>code</b>
+      </p>
+      <img src="./images/day1/dl.png" alt="d">
+    </section>
+    <hr>
+    <section id="anchor">
+      <h3>Anchor Tag (&lt;a&gt;)</h3>
+      <li>
+
+        Used to create hyperlinks.
+      </li>
+      <h3>Attributes:</h3>
+
+
+      <li>
+
+        href → URL or path of the page to open.
+      </li>
+      <li>
+        target="_blank" → Opens link in a <b>new tab</b>.
+
+      </li>
+      <p>
+        <b>code</b>
+      </p>
+      <img src="./images/day1/anchor.png" alt="">
+
+    </section>
+    <hr>
+    <section id="image">
+      <h3>Image Tag (&lt;img&gt;)</h3>
+
+      <ul>
+        <li>Used to display images.</li>
+        <li>It is a <strong>self-closing</strong> tag.</li>
+      </ul>
+
+      <h3>Important Attributes</h3>
+      <ul>
+        <li>src → Path or URL of the image.</li>
+        <li>alt → Alternate text (shown if image fails to load, useful for SEO & accessibility).</li>
+        <li>height width → Controls the size of the image.</li>
+      </ul>
+      <p><b>code</b></p>
+      <img src="./images/day1/image.png" alt="image">
+
+    </section>
+  </main>
+  <hr>
+  <footer>
+    <center>
+      <p>&copy; 2025 HTML Notes. All rights reserved.</p>
+    </center>
+  </footer>
+</body>
+
+</html>

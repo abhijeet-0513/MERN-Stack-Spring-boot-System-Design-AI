@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day4 - HTML Forms</title>
+</head>
+
+<body>
+  <header>
+    <center>
+      <h1>HTML Mastery: 6-Day Learning Journey</h1>
+    </center>
+    <center>
+      <nav>
+        <a href="index.html">Home</a> | <a href="day1.html">Day 1</a> |
+        <a href="day2.html">Day 2</a> | <a href="day3.html">Day 3</a> |
+        <a href="day4.html">Day 4</a> | <a href="day5.html">Day 5</a>
+      </nav>
+    </center>
+    <hr />
+    <section>
+      <center>
+        <p>
+          Topics:
+
+          <a href="#form">Form</a> | <a href="#label">Label</a> |
+          <a href="#input">Input</a> | <a href="#text">Textarea</a> |
+          <a href="#select">Select</a> | <a href="#btn">Button</a> |
+          <a href="#group">Grouping</a> | <a href="#advance">Adv. features</a>
+        </p>
+      </center>
+    </section>
+  </header>
+
+  <main>
+    <section id="form">
+      <h2>What is an HTML Form?</h2>
+      <ul>
+        <li>An <b>HTML form</b> is used to <b>collect user input</b>.</li>
+        <li>
+          Example: login forms, signup forms, feedback forms, search boxes,
+          etc.
+        </li>
+        <li>Collected data is usually sent to a server for processing.</li>
+      </ul>
+
+      <h2>Why are Forms Needed?</h2>
+      <ul>
+        <li>To interact with users and collect data.</li>
+        <li>To enable user authentication (login, signup).</li>
+        <li>To submit information like orders, queries, surveys.</li>
+        <li>To allow search functionality on websites.</li>
+      </ul>
+
+      <hr />
+      <h2>HTML Form Elements</h2>
+
+      <h2>&lt;form&gt; Tag</h2>
+      <ul>
+        <li>Defines a form for user input.</li>
+        <li>Wraps all form elements.</li>
+        <li>
+          <strong>Important Attributes:</strong>
+          <ul>
+            <li>
+              action → URL where form data is sent (e.g., a server or API).
+            </li>
+            <li>
+              method → How data is sent:
+              <ul>
+                <li>GET (data in URL, not secure, used for searches).</li>
+                <li>
+                  POST (data in request body, secure, used for login,
+                  registration).
+                </li>
+              </ul>
+            </li>
+            <li>
+              enctype → Encoding type for file uploads (multipart/form-data).
+            </li>
+            <li>target → Where to display response (_self, _blank).</li>
+          </ul>
+        </li>
+      </ul>
+      <img src="./images/day4/form.png" alt="" />
+    </section>
+    <hr />
+    <section id="label">
+      <h3>&lt;label&gt;</h3>
+      <ul>
+        <li>Used to label input fields.</li>
+        <li>Connected to input via for (should match the input id).</li>
+        <li>
+          Improves <strong>accessibility</strong> (screen readers, clicking
+          label focuses input).
+        </li>
+      </ul>
+      <label for="name">First Name:</label>
+      <input type="text" id="name" name="name" /><br />
+      <p><b>code</b></p>
+      <img src="./images/day4/label.png" alt="label" />
+    </section>
+    <hr />
+    <section id="input">
+      <h3>&lt;input&gt;</h3>
+      <ul>
+        <li>Most commonly used form element.</li>
+        <li>type attribute defines behavior.</li>
+      </ul>
+
+      <h3>Common Input Types:</h3>
+      <ul>
+        <li>text → single-line text.</li>
+        <li>password → masked input.</li>
+        <li>email → validates email format.</li>
+        <li>tel → for phone numbers.</li>
+        <li>date → calendar selector.</li>
+        <li>file → upload files.</li>
+        <li>
+          radio → choose <strong>one option</strong> in a group (must share
+          same name).
+        </li>
+        <li>checkbox → choose <strong>multiple options</strong>.</li>
+        <li>number → numeric input.</li>
+        <li>range → slider for numbers.</li>
+        <li>submit → submit form.</li>
+        <li>reset → clear all inputs.</li>
+        <li>button → custom button.</li>
+      </ul>
+      <input type="email" name="email" placeholder="Enter email" /><br />
+      <p><b>code</b></p>
+      <img src="./images/day4/input.png" alt="input" />
+    </section>
+    <hr />
+    <section id="text">
+      <h3>&lt;textarea&gt;</h3>
+      <ul>
+        <li>
+          For <strong>multi-line input</strong> (like address, comments).
+        </li>
+        <li>
+          <strong>Attributes:</strong>
+          <ul>
+            <li>rows → height (number of lines).</li>
+            <li>cols → width (characters per line).</li>
+          </ul>
+        </li>
+        <li>Can also use CSS for sizing.</li>
+      </ul>
+      <textarea name="message" rows="5" cols="30"></textarea>
+      <p><b>code</b></p>
+      <img src="./images/day4/text.png" alt="text" />
+    </section>
+    <hr />
+    <section id="select">
+      <h3>&lt;select&gt; and &lt;option&gt;</h3>
+      <ul>
+        <li>Dropdown menu.</li>
+        <li>&lt;option&gt; defines choices.</li>
+        <li>
+          <strong>Attributes:</strong>
+          <ul>
+            <li>value → submitted value.</li>
+            <li>selected → preselected option.</li>
+            <li>multiple → allows selecting multiple values.</li>
+          </ul>
+        </li>
+      </ul>
+      <label for="course">Select your course:</label>
+      <select name="course" id="course">
+        <option value="CSE">CSE</option>
+        <option value="EC">EC</option>
+        <option value="ME">ME</option>
+        <option value="CE">CE</option>
+      </select>
+      <p><b>code</b></p>
+      <img src="./images/day4/select.png" alt="select" />
+    </section>
+    <hr />
+    <section id="btn">
+      <h3>&lt;button&gt;</h3>
+      <ul>
+        <li>Used for submission or actions.</li>
+        <li>
+          <strong>Attributes:</strong>
+          <ul>
+            <li>type="submit" → submits form (default).</li>
+            <li>type="reset" → clears inputs.</li>
+            <li>type="button" → general button.</li>
+          </ul>
+        </li>
+      </ul>
+      <button type="submit">Register</button>
+      <p><b>code</b></p>
+      <img src="./images/day4/button.png" alt="button" />
+    </section>
+    <hr />
+    <section id="group">
+      <h3>Grouping Inputs</h3>
+      <h4>Radio Buttons</h4>
+      <ul>
+        <li>All <strong>same name</strong> = only one selectable.</li>
+      </ul>
+      <input type="radio" name="gender" value="male" /> Male
+      <input type="radio" name="gender" value="female" /> Female
+      <h4>Checkboxes</h4>
+      <ul>
+        <li>Multiple can be selected.</li>
+      </ul>
+
+      <input type="checkbox" name="interest" id="sports" value="sports" />
+      <label for="sports">Sports</label>
+
+      <input type="checkbox" name="interest" id="music" value="music" />
+      <label for="music">Music</label>
+
+      <input type="checkbox" name="interest" id="sportsTech" value="sportsTech" />
+      <label for="sportsTech">Tech</label>
+
+      <input type="checkbox" name="interest" id="volintering" value="volintering" />
+      <label for="volintering">Volintering</label>
+
+      <p><b>code</b></p>
+      <img src="./images/day4/check.png" alt="" />
+    </section>
+    <hr />
+    <section id="advance">
+      <h3>Advanced HTML Form Features</h3>
+
+      <h3>File Upload</h3>
+
+      <ul>
+        <li>accept → restricts file type (image/*, .pdf, .doc).</li>
+      </ul>
+      <input type="file" name="profilePic" accept="image/*" />
+      <p><b>code</b></p>
+      <img src="./images/day4/file.png" alt="" />
+      <hr />
+
+      <h3>Security & Validation</h3>
+      <ul>
+        <li>required → mandatory field.</li>
+        <li>min, max, maxlength, minlength → input limits.</li>
+        <li>pattern → regex validation.</li>
+      </ul>
+      <p><b>code</b></p>
+      <img src="./images/day4/valid.png" alt="" />
+      <hr />
+
+      <h3>Extra Useful Tags</h3>
+      <ul>
+        <li>&lt;fieldset&gt; → groups related form fields.</li>
+        <li>&lt;legend&gt; → title for a fieldset.</li>
+        <li>&lt;datalist&gt; → provides suggestions in a text field.</li>
+        <li>&lt;output&gt; → shows calculated results.</li>
+      </ul>
+      <p><b>code</b></p>
+      <img src="./images/day4/image.png" alt="" />
+    </section>
+  </main>
+  <hr />
+  <footer>
+    <center>
+      <p>&copy; 2025 HTML Notes. All rights reserved.</p>
+    </center>
+  </footer>
+</body>
+
+</html>
