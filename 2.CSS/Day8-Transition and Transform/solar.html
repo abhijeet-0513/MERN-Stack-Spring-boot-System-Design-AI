@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>CSS Solar System (HTML + CSS only)</title>
+<style>
+  :root{
+    --bg: #05060a;
+    --accent: #ffd86b;
+    --orbit-color: rgba(255,255,255,0.06);
+  }
+
+  /* page layout */
+  html,body{
+    height:100%;
+    margin:0;
+    background: radial-gradient(1200px 600px at 10% 20%, #0b1220 0%, var(--bg) 40%), var(--bg);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .scene {
+    width: min(92vw, 920px);
+    height: min(92vh, 720px);
+    position: relative;
+    display: grid;
+    place-items: center;
+  }
+
+  /* central sun */
+  .sun {
+    position:absolute;
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background: radial-gradient(circle at 35% 30%, #fff6d0 0%, #ffd86b 25%, #ff8a00 60%, #cf5800 100%);
+    box-shadow: 0 0 80px 20px rgba(255,160,30,0.2), 0 0 30px 6px rgba(255,120,20,0.08) inset;
+    z-index:10;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .sun::after{
+    content:"Sun";
+    font-size:13px;
+    color:#2a1400;
+    font-weight:700;
+    letter-spacing:0.5px;
+  }
+
+  /* orbit ring (visual) */
+  .orbit {
+    position:absolute;
+    border-radius:50%;
+    border:1px dashed var(--orbit-color);
+    display:block;
+    transform: translate(-50%,-50%);
+    left:50%;
+    top:50%;
+    pointer-events:none;
+  }
+
+  /* planet inside its orbit */
+  .planet {
+    --planet-size: 14px;     /* override per planet */
+    --planet-color: #8bd3ff; /* override per planet */
+    width: var(--planet-size);
+    height: var(--planet-size);
+    border-radius:50%;
+    background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(0,0,0,0.15)), var(--planet-color);
+    position:absolute;
+    top:50%;
+    left: calc(50% + var(--distance)); /* start at right-most point of orbit */
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.45);
+  }
+
+  /* planet wrapper that rotates the planet around center */
+  .planet-wrap {
+    /* wrapper sits centered on scene */
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:100%;
+    height:100%;
+    transform-origin: 50% 50%;
+    animation: spin linear infinite;
+    pointer-events:none; /* let clicks pass */
+  }
+
+  /* each planet-wrap will have its own animation-duration via inline style or CSS var */
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+
+  /* label under planet */
+  .label {
+    position:absolute;
+    top: calc(50% + var(--distance) + 18px);
+    left: calc(50% + var(--distance));
+    transform: translate(-50%, 0);
+    font-size: 11px;
+    color: rgba(255,255,255,0.75);
+    white-space:nowrap;
+    pointer-events:none;
+  }
+
+  /* Saturn ring example using pseudo element */
+  .saturn {
+    position: absolute;
+    border-radius:50%;
+  }
+  .saturn::before{
+    content:'';
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%) rotate(25deg);
+    width: calc(var(--planet-size) * 3.2);
+    height: calc(var(--planet-size) * 1.4);
+    border-radius:50%;
+    border: 3px solid rgba(200,170,120,0.8);
+    background: linear-gradient(90deg, rgba(255,230,200,0.05), rgba(255,200,140,0.03));
+    box-shadow: 0 6px 12px rgba(0,0,0,0.35) inset;
+  }
+
+  /* example planet-specific tweaks (sizes, colors, distances, speeds) */
+  /* Mercury */
+  .orbit.mercury { width:160px; height:160px; margin-left:-80px; margin-top:-80px; }
+  .planet.mercury { --planet-size:10px; --planet-color:#bdbdbd; --distance:72px; }
+  .planet-wrap.mercury { animation-duration:4s; }
+
+  /* Venus */
+  .orbit.venus { width:220px; height:220px; margin-left:-110px; margin-top:-110px; }
+  .planet.venus { --planet-size:12px; --planet-color:#e7b16a; --distance:110px; }
+  .planet-wrap.venus { animation-duration:7s; }
+
+  /* Earth */
+  .orbit.earth { width:300px; height:300px; margin-left:-150px; margin-top:-150px; }
+  .planet.earth { --planet-size:14px; --planet-color:linear-gradient(180deg,#5eb3ff,#1f7bdc); --distance:148px; box-shadow: 0 6px 14px rgba(31,123,220,0.4); }
+  .planet-wrap.earth { animation-duration:10s; }
+
+  /* Moon orbit around Earth (nested small orbit) */
+  .moon-orbit {
+    position:absolute;
+    width:36px;
+    height:36px;
+    left: calc(50% + 148px - 18px); /* center at Earth's position */
+    top: calc(50% - 18px);
+    margin:0;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,0.05);
+    transform-origin: center;
+    animation: moon-spin 1.6s linear infinite;
+  }
+  .moon {
+    position:absolute;
+    width:6px; height:6px; border-radius:50%;
+    left:100%; top:50%; transform: translate(-50%,-50%);
+    background:#dcdcdc;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  }
+  @keyframes moon-spin { from{transform: rotate(0deg)} to{transform: rotate(360deg)} }
+
+  /* Mars */
+  .orbit.mars { width:360px; height:360px; margin-left:-180px; margin-top:-180px; }
+  .planet.mars { --planet-size:12px; --planet-color:#d86b4a; --distance:180px; }
+  .planet-wrap.mars { animation-duration:15s; }
+
+  /* Jupiter */
+  .orbit.jupiter { width:520px; height:520px; margin-left:-260px; margin-top:-260px; }
+  .planet.jupiter { --planet-size:26px; --planet-color:linear-gradient(180deg,#f3c08a,#d7935a); --distance:260px; }
+  .planet-wrap.jupiter { animation-duration:28s; }
+
+  /* Saturn */
+  .orbit.saturn { width:620px; height:620px; margin-left:-310px; margin-top:-310px; }
+  .planet.saturn { --planet-size:22px; --planet-color:linear-gradient(180deg,#e8d7b5,#b98c55); --distance:310px; }
+  .planet-wrap.saturn { animation-duration:36s; }
+
+  /* Uranus */
+  .orbit.uranus { width:720px; height:720px; margin-left:-360px; margin-top:-360px; }
+  .planet.uranus { --planet-size:18px; --planet-color:linear-gradient(180deg,#cfeef7,#76d0e6); --distance:360px; }
+  .planet-wrap.uranus { animation-duration:48s; }
+
+  /* Neptune */
+  .orbit.neptune { width:820px; height:820px; margin-left:-410px; margin-top:-410px; }
+  .planet.neptune { --planet-size:18px; --planet-color:linear-gradient(180deg,#668ad5,#1b60b0); --distance:410px; }
+  .planet-wrap.neptune { animation-duration:62s; }
+
+  /* make orbits faint and behind sun */
+  .orbit { z-index:1; background:transparent; }
+
+  /* labels always on top */
+  .label { z-index:12; font-family: Arial, sans-serif; }
+
+  /* reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    .planet-wrap, .moon-orbit { animation-duration: 0.001s !important; animation-iteration-count: 1 !important; }
+  }
+
+  /* responsive tweaks: keep the whole system inside smaller screens */
+  @media (max-width:900px) {
+    .scene { transform: scale(0.85); }
+  }
+  @media (max-width:720px) {
+    .scene { transform: scale(0.7); }
+  }
+  @media (max-width:480px) {
+    .scene { transform: scale(0.55); }
+  }
+
+  /* small helper to render planet color when linear-gradient used in var */
+  .planet[style*="linear-gradient"], .planet[style*="linear-gradient"] { background: var(--planet-color); }
+</style>
+</head>
+<body>
+  <div class="scene" aria-label="Solar System demo (CSS only)">
+    <div class="sun" role="img" aria-label="Sun"></div>
+
+    <!-- Orbits + planet wrappers + planet + label -->
+    <!-- Mercury -->
+    <div class="orbit mercury" aria-hidden="true"></div>
+    <div class="planet-wrap mercury" aria-hidden="true">
+      <div class="planet mercury" style="--planet-color: #bdbdbd; --distance:72px;"></div>
+      <div class="label" style="--distance:72px; top: calc(50% + 72px + 12px);">Mercury</div>
+    </div>
+
+    <!-- Venus -->
+    <div class="orbit venus" aria-hidden="true"></div>
+    <div class="planet-wrap venus" aria-hidden="true">
+      <div class="planet venus" style="--planet-color: #e7b16a; --distance:110px;"></div>
+      <div class="label" style="--distance:110px; top: calc(50% + 110px + 12px);">Venus</div>
+    </div>
+
+    <!-- Earth + Moon -->
+    <div class="orbit earth" aria-hidden="true"></div>
+    <div class="planet-wrap earth" aria-hidden="true">
+      <div class="planet earth" style="--planet-color: #1f7bdc; --distance:148px;"></div>
+      <!-- moon nested orbit -->
+      <div class="moon-orbit" aria-hidden="true">
+        <div class="moon" aria-hidden="true"></div>
+      </div>
+      <div class="label" style="--distance:148px; top: calc(50% + 148px + 12px);">Earth</div>
+    </div>
+
+    <!-- Mars -->
+    <div class="orbit mars" aria-hidden="true"></div>
+    <div class="planet-wrap mars" aria-hidden="true">
+      <div class="planet mars" style="--planet-color: #d86b4a; --distance:180px;"></div>
+      <div class="label" style="--distance:180px; top: calc(50% + 180px + 12px);">Mars</div>
+    </div>
+
+    <!-- Jupiter -->
+    <div class="orbit jupiter" aria-hidden="true"></div>
+    <div class="planet-wrap jupiter" aria-hidden="true">
+      <div class="planet jupiter" style="--planet-color: linear-gradient(180deg,#f3c08a,#d7935a); --planet-size:26px; --distance:260px;"></div>
+      <div class="label" style="--distance:260px; top: calc(50% + 260px + 16px);">Jupiter</div>
+    </div>
+
+    <!-- Saturn -->
+    <div class="orbit saturn" aria-hidden="true"></div>
+    <div class="planet-wrap saturn" aria-hidden="true">
+      <div class="planet saturn" style="--planet-color: linear-gradient(180deg,#e8d7b5,#b98c55); --planet-size:22px; --distance:310px;">
+        <div class="saturn"></div>
+      </div>
+      <div class="label" style="--distance:310px; top: calc(50% + 310px + 18px);">Saturn</div>
+    </div>
+
+    <!-- Uranus -->
+    <div class="orbit uranus" aria-hidden="true"></div>
+    <div class="planet-wrap uranus" aria-hidden="true">
+      <div class="planet uranus" style="--planet-color: linear-gradient(180deg,#cfeef7,#76d0e6); --planet-size:18px; --distance:360px;"></div>
+      <div class="label" style="--distance:360px; top: calc(50% + 360px + 18px);">Uranus</div>
+    </div>
+
+    <!-- Neptune -->
+    <div class="orbit neptune" aria-hidden="true"></div>
+    <div class="planet-wrap neptune" aria-hidden="true">
+      <div class="planet neptune" style="--planet-color: linear-gradient(180deg,#668ad5,#1b60b0); --planet-size:18px; --distance:410px;"></div>
+      <div class="label" style="--distance:410px; top: calc(50% + 410px + 18px);">Neptune</div>
+    </div>
+
+  </div>
+</body>
+</html>
