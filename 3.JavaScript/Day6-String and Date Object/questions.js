@@ -68,35 +68,41 @@
 // 🔹 Dates Practice
 
 // Print the current date and time using new Date().
-const date = new Date();
-console.log(date.toString());
+// const date = new Date();
+// console.log(date.toString());
 // Print the current year, month, day, hours, minutes, and seconds separately.
-console.log(date.getFullYear());
-console.log(date.getMonth());
-console.log(date.getDay());
-console.log(date.getHours());
-console.log(date.getMinutes());
-console.log(date.getSeconds());
+// console.log(date.getFullYear());
+// console.log(date.getMonth());
+// console.log(date.getDay());
+// console.log(date.getHours());
+// console.log(date.getMinutes());
+// console.log(date.getSeconds());
 // Create a date object for your birthday (e.g., new Date(2000, 5, 15)), and print the day of the week.
+const bDay = new Date(1998, 4, 13);
+console.log(bDay.toDateString());
 
 // Find the difference (in days) between today and "1 Jan 2026".
-
+console.log((new Date(2026, 0, 1) - new Date()) / (1000 * 60 * 60 * 24));
 // Print today’s date in the format:
-
+const d=new Date()
 // DD-MM-YYYY
-
+console.log(d.toLocaleDateString())
 // Write a program that prints the date 7 days from today.
-
+console.log(new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toDateString());
 // Convert the current date to:
 
 // ISO string
-
+console.log(d.toISOString())
 // Locale string
-
+console.log(d.toLocaleString())
 // UTC string
-
+console.log(d.toUTCString())
 // Write a program that shows how many milliseconds have passed since "1 Jan 2000".
-
+console.log(new Date()-new Date(2000,0,1))
 // Given a timestamp (e.g., 1600000000000), convert it back to a readable date.
-
+console.log(new Date(1600000000000).toLocaleDateString())
 // Check if the current year is a leap year.
+
+const currentYear = new Date().getFullYear();
+const isLeapYear = new Date(currentYear, 1, 29).getDate() === 29;
+console.log(`${currentYear} is${isLeapYear ? '' : ' not'} a leap year.`);
