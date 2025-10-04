@@ -1,26 +1,26 @@
 // how do we create variables in js
 
-// let name = "Rohit";
-// let age = 30;
-// age = 39;
+let name = "Rohit";
+let age = 30;
+age = 39;
 
-// console.log(name, age);
+console.log(name, age);
 
-// const acc = 3989;
-// acc = 7478;
-// console.log(acc);
+const acc = 3989;
+acc = 7478;
+console.log(acc);
 
-// var a = 10;
-// var a = 20;
-// console.log(a);
+var a = 10;
+var a = 20;
+console.log(a);
 
 // Data types
 
 // primitive data types
 // number
-// let a = 10;
-// let b = 3.14;
-// console.log(a, b);
+let a = 10;
+let c = 3.14;
+console.log(a, c);
 
 //  strinng
 
@@ -42,56 +42,56 @@ console.log(user);
 // // undefined
 
 // let user;
-// console.log(typeof user);
+console.log(typeof user);
 // // const p;
 
 // console.log(user);
 
 // bigint
-// let num = 23216378261783213461n;
-// console.log(typeof num);
-// console.log(num);
+let num = 23216378261783213461n;
+console.log(typeof num);
+console.log(num);
 
 // null
 // let weather = null;
-// console.log(typeof weather);
+console.log(typeof weather);
 
-// let weather = current_weather("Dwarka")
+let weather = current_weather("Dwarka")
 // 25
 // null
 // undefined
 
 // symbol
 
-// const id1 = Symbol("id");
-// const id2 = Symbol("id");
-// console.log(typeof id2);
-// console.log(id2==id1);
+const id1 = Symbol("id");
+const id2 = Symbol("id");
+console.log(typeof id2);
+console.log(id2==id1);
 
 // Non Primitive Data type
 // array, object, function
 
-// let arr = [10,20,11,"Rohit",true];
-// console.log(typeof arr);
+let arr = [10,20,11,"Rohit",true];
+console.log(typeof arr);
 
-// console.log(arr);
+console.log(arr);
 
 // Rohit 12312 18 gen
 
-// let user = {
-//     name:"Rohit",
-//     account:12312,
-//     age:18,
-//     category:'gen'
-// }
+let user1 = {
+    name:"Rohit",
+    account:12312,
+    age:18,
+    category:'gen'
+}
 
-// console.log(typeof user);
+console.log(typeof user1);
 
-// let s = function add(){
-//     console.log("Hello");
-// }
+let s = function add(){
+    console.log("Hello");
+}
 
-// console.log(typeof s);
+console.log(typeof s);
 
 // Primitive data type is immutable
 
@@ -102,13 +102,13 @@ b = 20;
 console.log(a, b);
 
 // let str = "Rohit";
-// str = "Mohan";
+str = "Mohan";
 
-// console.log(str);
+console.log(str);
 
 // Non primitive data type mutable
 
-let arr = [10, 20, 30, 40];
+// let arr = [10, 20, 30, 40];
 
 arr.push(90);
 arr[0] = 70;

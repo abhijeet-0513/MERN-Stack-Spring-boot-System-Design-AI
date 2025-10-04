@@ -1,13 +1,13 @@
 // Number
-// let a = 10;
-// let b = 324.6869;
-// let c = b.toFixed(2);
-// console.log(typeof c);
-// console.log((657.4645).toPrecision(5));
+let a = 10;
+let b = 324.6869;
+let c = b.toFixed(2);
+console.log(typeof c);
+console.log((657.4645).toPrecision(5));
 
-// let d = 7584.849;
-// console.log(typeof d.toString());
-// console.log(d,typeof d)
+let d = 7584.849;
+console.log(typeof d.toString());
+console.log(d,typeof d)
 
 //
 // let a=20
@@ -24,10 +24,10 @@
 
 // console.log({})
 
-// console.log(Boolean(0)) // checking for address only; that's why it mark it as true
-// console.log(Boolean(2))
-// console.log(Boolean(new Number()))
-// console.log(Boolean(new Number(null)))
+console.log(Boolean(0)) // checking for address only; that's why it mark it as true
+console.log(Boolean(2))
+console.log(Boolean(new Number()))
+console.log(Boolean(new Number(null)))
 
 // let a = 10;
 // let b = a;
@@ -35,24 +35,24 @@
 
 // *******************************       Math Object       *************************************
 
-// console.log(Math.abs(-4));
-// console.log(Math.PI.toFixed(2));
-// console.log(Math.LN10);
-// console.log(Math.SQRT2);
+console.log(Math.abs(-4));
+console.log(Math.PI.toFixed(2));
+console.log(Math.LN10);
+console.log(Math.SQRT2);
 
-// console.log(Math.ceil(3.3))
-// console.log(Math.floor(2.9))
-// console.log(Math.log10(20))
-// console.log(Math.max(46,67693,74539,3564847782))
+console.log(Math.ceil(3.3))
+console.log(Math.floor(2.9))
+console.log(Math.log10(20))
+console.log(Math.max(46,67693,74539,3564847782))
 
-// let rand = Math.random(); // generate no betn 0-1, where 0 is included 1 is not included
-// console.log(rand);
+let rand = Math.random(); // generate no betn 0-1, where 0 is included 1 is not included
+console.log(rand);
 
-// let random = Math.floor(Math.random() * 10) + 1;
-// console.log(random);
+let random = Math.floor(Math.random() * 10) + 1;
+console.log(random);
 
-// let dice = Math.floor(Math.random() * 6 + 1);
-// console.log(dice);
+let dice = Math.floor(Math.random() * 6 + 1);
+console.log(dice);
 
 // formula to generate random numbers in a given range
 // Math.floor(Math.random()*totalNumberOfOutcomes)+shift
