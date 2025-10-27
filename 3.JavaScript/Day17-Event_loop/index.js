@@ -42,4 +42,10 @@ user.then((data) => data.json()).then((res) => console.log(res));
 // 2. Callback queue: where the callback functions are stored after the async task is completed
 // 3. Event loop: which continuously checks whether the call stack is empty or not and push the callback functions from callback queue to call stack for execution
 
-// 
+// queue is of two types callback queue and microtask queue
+// microtask queue has higher priority than callback queue
+// microtask queue is used to store the promises and mutation observers
+// after the execution of synchronous code the event loop first check the microtask queue if it has any task then it push the task to call stack for execution and then check the callback queue
+// what are the things which goes to microtask queue and callback queue
+// promises and mutation observers goes to microtask queue
+// setTimeout, setInterval, DOM events goes to callback queue
